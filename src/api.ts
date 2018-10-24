@@ -26,6 +26,7 @@ query ($season: MediaSeason!, $seasonYear: Int!, $page: Int) {
       coverImage {
         large
       }
+      bannerImage
     }
   }
 }
@@ -76,14 +77,18 @@ export let getRandomAnime = asyncMiddleware(
     );
     const animeTitle = await json.data.Page.media[randomizedNumber].title
       .romaji;
+    const animeId = await json.data.Page.media[randomizedNumber].id;
     const animeCover = await json.data.Page.media[randomizedNumber].coverImage
       .large;
+    const animeBanner = await json.data.Page.media[randomizedNumber].bannerImage;
     const data = await {
+      id: animeId,
       year: randomYear,
       season: randomSeason,
       total: animeList.length,
       title: animeTitle,
       image: animeCover,
+      banner: animeBanner,
     };
     await res.render("index", data);
   },
