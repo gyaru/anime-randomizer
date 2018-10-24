@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#7c71d9">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <title>eru.me - anime randomizer</title>
+  <style>
+    body {
+      background: #2D3E4D;
+      overflow: hidden;
+    }
+
+    #container {
+      height: 100vh;
+      display: flex;
+    }
+
+    #box {
+      height: 550px;
+      width: 800px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      margin: auto;
+
+    }
+
+    h1 {
+      color: #FFF;
+      text-align: center;
+      font-size: 54px;
+    }
+    h2 {
+      color: #FFF;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="box">
+      <h1>{{title}}</h1>
+      <h2>{{season}} - {{year}} ({{total}} Shows)</h2>
+      <img src="{{image}}"></img>
+    </div>
+  </div>
+</body>
+
+</html>

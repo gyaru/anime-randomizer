@@ -1,0 +1,32 @@
+{
+  "name": "anime-randomizer",
+  "version": "1.0.0",
+  "description": "let's have some shitty fun",
+  "main": "out/index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "mustache": "^3.0.0",
+    "mustache-express": "^1.2.8",
+    "node-fetch": "^2.2.0",
+    "typescript": "^2.9.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "0.0.36",
+    "@types/express": "^4.16.0",
+    "@types/node": "^10.12.0",
+    "@types/node-fetch": "^2.1.2",
+    "nodemon": "^1.18.4",
+    "tslint": "^5.10.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "copy": "cp src/views out -r",
+    "start": "npm run copy && npm run build && npm run serve",
+    "serve": "node out/index.js",
+    "build-watch": "tsc -w",
+    "serve-watch": "nodemon out/index.js"
+  }
+}
