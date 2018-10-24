@@ -1,7 +1,7 @@
 import bodyParser from "body-parser";
 import compression from "compression";
 import express from "express";
-const mustacheExpress = require('mustache-express');
+import mustacheExpress from 'mustache-express';
 
 // controllers
 import * as apiController from "./api";
