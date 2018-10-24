@@ -1,1 +1,2 @@
-# ignore this repo pls
+# anime-randomizer
+basically just to test GraphQL, ignore pls.
